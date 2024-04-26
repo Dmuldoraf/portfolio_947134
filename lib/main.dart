@@ -1,7 +1,13 @@
 import 'package:flutter/material.dart';
 import 'presentation/landingPage.dart';
 
+import 'uebungen/uebung1.dart';
+
+
 void main() {
+  // Uebungen mit Ausgabe in Console
+  alleAufgabenUebung1();
+
   // Flutter App
   runApp(const MyApp());
 }

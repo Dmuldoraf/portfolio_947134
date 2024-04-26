@@ -9,7 +9,7 @@ void main() {
   alleAufgabenUebung1();
 
   // Flutter App
-  runApp(const MyApp());
+  // runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

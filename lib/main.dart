@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'presentation/landing_page.dart';
+import 'presentation/landingPage.dart';
 
 void main() {
-  
-  
-  //runApp(const MyApp());
+  // Flutter App
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -18,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Landing Page'),
+      home: const MyHomePage(title: 'Landing Page'), // Liegt in lib/presentation/landingPage.dart
     );
   }
 }

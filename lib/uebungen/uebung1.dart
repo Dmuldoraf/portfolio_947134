@@ -109,6 +109,23 @@ void uebung1Aufgabe7() {
 
 void uebung1Aufgabe8() {
   print('############### Übung1 Aufgabe8 ###############');
+  List<int> numbers = [34, 32, 3, 7, 89, 8];
+  List<String> fruechtchen = [
+    'Abfel',
+    'Birme',
+    'Schwamm',
+    'Taube',
+    'Nuesschen'
+  ];
+  String ersteElement(List<dynamic> liste) {
+    return liste[0].toString();
+  }
+
+  print(numbers.toString());
+  print(fruechtchen.toString());
+  print('Erste Element von numbers: ' + ersteElement(numbers));
   print(
-      '## Aufgabe 8: Generics**Beschreibung:** Schreibe eine generische Funktion `ersteElement`, die eine Liste von Elementen eines beliebigen Typs akzeptiert und das erste Element der Liste zurückgibt. Teste diese Funktion mit einer Liste von Integers und einer Liste von Strings.');
+      'Erste Element von fruechtchen: ' + ersteElement(fruechtchen));
+  // ## Aufgabe 8: Generics**Beschreibung:** Schreibe eine generische Funktion `ersteElement`, die eine Liste von Elementen eines beliebigen Typs akzeptiert und
+  // das erste Element der Liste zurückgibt. Teste diese Funktion mit einer Liste von Integers und einer Liste von Strings.');
 }

@@ -117,15 +117,17 @@ void uebung1Aufgabe8() {
     'Taube',
     'Nuesschen'
   ];
-  String ersteElement(List<dynamic> liste) {
+  var erstEelement = (List<dynamic> liste) {
     return liste[0].toString();
-  }
+  };
+/*   String ersteElement(List<dynamic> liste) {
+    return liste[0].toString();
+  } */
 
   print(numbers.toString());
   print(fruechtchen.toString());
-  print('Erste Element von numbers: ' + ersteElement(numbers));
-  print(
-      'Erste Element von fruechtchen: ' + ersteElement(fruechtchen));
+  print('Erste Element von numbers: ' + erstEelement(numbers));
+  print('Erste Element von fruechtchen: ' + erstEelement(fruechtchen));
   // ## Aufgabe 8: Generics**Beschreibung:** Schreibe eine generische Funktion `ersteElement`, die eine Liste von Elementen eines beliebigen Typs akzeptiert und
   // das erste Element der Liste zurückgibt. Teste diese Funktion mit einer Liste von Integers und einer Liste von Strings.');
 }

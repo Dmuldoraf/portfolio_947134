@@ -34,6 +34,13 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: const Text('Curriculum'),
               ),
             ),
+                        Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: ElevatedButton(
+                onPressed: () => Navigator.pushNamed(context, '/skills'),
+                child: const Text('Skills'),
+              ),
+            ),
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: SizedBox(

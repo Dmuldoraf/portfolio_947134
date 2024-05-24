@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:portfolio_947134/presentation/Widgets/navigation_button.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -13,68 +15,65 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        centerTitle: true,
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: const Text('Startseite'),
+        title: Text('Startseite',
+            style: GoogleFonts.russoOne(
+                textStyle: const TextStyle(fontSize: 32, letterSpacing: .5))),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ElevatedButton(
-                onPressed: () => Navigator.pushNamed(context, '/about'),
-                child: const Text('Über mich'),
-              ),
+        child: Container(
+          height: MediaQuery.of(context).size.height,
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: [
+                Colors.green[200]!,
+                Colors.purple[200]!,
+              ],
+              begin: Alignment.topCenter,
+              end: Alignment.bottomCenter,
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ElevatedButton(
-                onPressed: () => Navigator.pushNamed(context, '/curriculum'),
-                child: const Text('Curriculum'),
-              ),
-            ),
-                        Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: ElevatedButton(
-                onPressed: () => Navigator.pushNamed(context, '/skills'),
-                child: const Text('Skills'),
-              ),
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SizedBox(
-                height: 100,
-                child: AnimatedTextKit(
-                  animatedTexts: [
-                    FadeAnimatedText(
-                      'My name is Giovanni Giorgio',
-                      textStyle: const TextStyle(
-                          fontFamily: 'Archivo',
-                          fontSize: 32,
-                          fontWeight: FontWeight.w400),
-                    ),
-                    FadeAnimatedText(
-                      'but egerybody calls me',
-                      textStyle: const TextStyle(
-                        fontFamily: 'Stencil',
-                        fontSize: 32,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
-                    ScaleAnimatedText(
-                      'Giorgio',
-                      textStyle: const TextStyle(
-                        fontFamily: 'Stencil Std, fantasy',
-                        fontSize: 72,
-                        fontWeight: FontWeight.w900,
-                      ),
-                    ),
-                  ],
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.3,
+                  child: AnimatedTextKit(
+                    repeatForever: true,
+                    pause: const Duration(milliseconds: 300),
+                    animatedTexts: [
+                      FadeAnimatedText('My name is Giovanni Giorgio',
+                          textStyle: GoogleFonts.russoOne(
+                              textStyle: const TextStyle(
+                                  fontSize: 32,
+                                  color: Colors.blue,
+                                  letterSpacing: .5))),
+                      FadeAnimatedText('but egerybody calls me',
+                          textStyle: GoogleFonts.russoOne(
+                              textStyle: const TextStyle(
+                                  fontSize: 32,
+                                  color: Colors.blue,
+                                  letterSpacing: .5))),
+                      ScaleAnimatedText('Giorgio!',
+                          textStyle: GoogleFonts.russoOne(
+                              textStyle: const TextStyle(
+                                  fontSize: 90,
+                                  color: Colors.blue,
+                                  letterSpacing: .5))),
+                    ],
+                  ),
                 ),
               ),
-            ),
-          ],
+              const NavigationButton(name: 'Curriculum', route: '/curriculum'),
+              const NavigationButton(name: 'Skills', route: '/skills'),
+              const NavigationButton(name: 'Projekte', route: '/projects'),
+              const NavigationButton(name: 'Über mich', route: '/about'),
+            ],
+          ),
         ),
       ),
     );

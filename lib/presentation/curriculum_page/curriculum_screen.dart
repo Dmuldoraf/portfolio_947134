@@ -10,7 +10,7 @@ class CurriculumScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-                onPressed: () => Navigator.pop(context),
+                onPressed: () => Navigator.popAndPushNamed(context, '/'),
                 child: const Text('Startseite'))
           ],
         ),

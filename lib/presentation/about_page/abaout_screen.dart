@@ -15,8 +15,8 @@ class AboutScreenState extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             ElevatedButton(
-                onPressed: () => Navigator.pushNamed(context, '/abaut'),
-                child: const Text('Über mich'))
+                onPressed: () => Navigator.popAndPushNamed(context, '/'),
+                child: const Text('Home'))
           ],
         ),
       ),

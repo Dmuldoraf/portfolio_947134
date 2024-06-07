@@ -14,7 +14,7 @@ class CurriculumScreen extends StatelessWidget {
             fit: BoxFit.cover,
           ),
         ),
-        child: Container(
+        child: SizedBox(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           child: Column(

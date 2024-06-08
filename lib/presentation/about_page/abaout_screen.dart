@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:portfolio_947134/presentation/Widgets/navigation_button.dart';
+
 
 class AboutScreenState extends StatelessWidget {
   const AboutScreenState({super.key});
@@ -27,7 +27,10 @@ class AboutScreenState extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              NavigationButton(name: 'Startseite Diggi', route: '/'),
+              Placeholder(
+                fallbackHeight: 200,
+                fallbackWidth: 200,
+              ),
             ],
           ),
         ),

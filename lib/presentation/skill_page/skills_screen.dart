@@ -34,6 +34,7 @@ class SkillsContainer extends StatelessWidget {
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            // FIXME - Row is quickly overflowing
             children: [
               LanguagesColumn(),
               const VerticalDivider(

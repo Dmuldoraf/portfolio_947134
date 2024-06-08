@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:portfolio_947134/presentation/Widgets/navigation_button.dart';
-import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:google_fonts/google_fonts.dart';
+// import 'package:portfolio_947134/presentation/Widgets/navigation_button.dart';
+import 'package:portfolio_947134/presentation/home_page/widgets/bio_container.dart';
 
 class HomeContainer extends StatelessWidget {
   @override
@@ -19,44 +18,22 @@ class HomeContainer extends StatelessWidget {
                 end: Alignment.bottomCenter,
               ),
             ),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.3,
-                    child: AnimatedTextKit(
-                      repeatForever: true,
-                      pause: const Duration(milliseconds: 300),
-                      animatedTexts: [
-                        FadeAnimatedText('My name is Giovanni Giorgio',
-                            textStyle: GoogleFonts.russoOne(
-                                textStyle: const TextStyle(
-                                    fontSize: 32,
-                                    color: Colors.blue,
-                                    letterSpacing: .5))),
-                        FadeAnimatedText('but egerybody calls me',
-                            textStyle: GoogleFonts.russoOne(
-                                textStyle: const TextStyle(
-                                    fontSize: 32,
-                                    color: Colors.blue,
-                                    letterSpacing: .5))),
-                        ScaleAnimatedText('Giorgio!',
-                            textStyle: GoogleFonts.russoOne(
-                                textStyle: const TextStyle(
-                                    fontSize: 90,
-                                    color: Colors.blue,
-                                    letterSpacing: .5))),
-                      ],
-                    ),
-                  ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    BioContainer(),
+                  ],
                 ),
-                const NavigationButton(
-                    name: 'Curriculum', route: '/curriculum'),
-                const NavigationButton(name: 'Skills', route: '/skills'),
-                const NavigationButton(name: 'Projekte', route: '/projects'),
-                const NavigationButton(name: 'Über mich', route: '/about'),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.2,
+                  child: Image.asset('assets/unbenannt.png'),
+                ),
+                /* const NavigationButton(name: 'Skills', route: '/skills'),
+                    const NavigationButton(name: 'Projekte', route: '/projects'),
+                    const NavigationButton(name: 'Über mich', route: '/about'), */
               ],
             ),
           );

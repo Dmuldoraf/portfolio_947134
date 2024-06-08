@@ -58,6 +58,7 @@ class MyApp extends StatelessWidget {
         ),
       ),
       initialRoute: '/',
+      // TODO - implement responsive design to prevent overflow when resizing the window
       routes: {
         '/': (context) => const HomeScreen(),
         '/about': (context) => const AboutScreenState(),

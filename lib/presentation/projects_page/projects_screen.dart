@@ -51,14 +51,16 @@ class _ProjectScreenState extends State<ProjectScreen> {
                 SliverToBoxAdapter(
                   child: SizedBox(
                     height: MediaQuery.of(context).size.height * 1.5,
-                    child: const Center(
-                      child: Text(
-                        '💩',
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 75,
-                            fontWeight: FontWeight.bold),
-                      ),
+                    child:  Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Center(
+                          child: Text('THM Entwicklung grafischer Benutzeroberflächen', style: Theme.of(context).textTheme.headlineMedium),
+                        ),
+                        Center(
+                          child: Image.asset('assets/thm_egb.png')
+                        ),
+                      ],
                     ),
                   ),
                 )

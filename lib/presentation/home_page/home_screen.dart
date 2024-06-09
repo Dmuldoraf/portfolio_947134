@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:portfolio_947134/presentation/contact_page/contact_screen.dart';
 import 'package:portfolio_947134/presentation/home_page/widgets/home_container.dart';
-import 'package:portfolio_947134/presentation/home_page/widgets/projects_container.dart';
-import 'package:portfolio_947134/presentation/skill_page/skills_screen.dart';
+import 'package:portfolio_947134/presentation/projects_page/projects_container.dart';
+import 'package:portfolio_947134/presentation/skill_page/skills_container.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});

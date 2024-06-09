@@ -29,11 +29,23 @@ class ProjectsContainer extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(
-            'Projects',
-            style: GoogleFonts.russoOne(
-                textStyle: const TextStyle(
-                    fontSize: 60, color: Colors.blue, letterSpacing: .5)),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Projects',
+                style: GoogleFonts.russoOne(
+                    textStyle: const TextStyle(
+                        fontSize: 60, color: Colors.blue, letterSpacing: .5)),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Text(
+                '(Hold shift to scroll with mouse wheel)',
+                style: Theme.of(context).textTheme.bodyMedium,
+              )
+            ],
           ),
           const SizedBox(
             height: 100,

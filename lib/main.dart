@@ -14,9 +14,8 @@ import 'uebungen/uebung2.dart'; */
 
 void main() {
   // Uebungen mit Ausgabe in Console
-  //alleAufgabenUebung2();
-
-  // Flutter App
+  // alleAufgabenUebung2();
+  
   runApp(const MyApp());
 }
 
@@ -64,7 +63,7 @@ class MyApp extends StatelessWidget {
         '/about': (context) => const AboutScreenState(),
         '/curriculum': (context) => const CurriculumScreen(),
         '/skills': (context) => const SkillScreen(),
-        '/projects': (context) => const ProjectScreen(),
+        '/project_one': (context) => const ProjectScreen(),
       },
     );
   }

@@ -6,7 +6,7 @@ class BioContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width / 2,
-      padding: EdgeInsets.all(24.0),
+      padding: const EdgeInsets.all(24.0),
       /*  decoration: BoxDecoration(
         color: Colors.white,
         borderRadius: BorderRadius.circular(16.0),
@@ -124,6 +124,11 @@ class BioContainer extends StatelessWidget {
           const SizedBox(height: 24.0),
           ElevatedButton(
             onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                const SnackBar(
+                  content: Text('Download functionality not implemented yet.'),
+                ),
+              );
               // TODO - Add download functionality
             },
             style: ElevatedButton.styleFrom(
@@ -133,7 +138,7 @@ class BioContainer extends StatelessWidget {
                 borderRadius: BorderRadius.circular(8.0),
               ),
             ),
-            child:  Text(
+            child: Text(
               'Download CV',
               style: Theme.of(context).textTheme.bodyMedium,
             ),

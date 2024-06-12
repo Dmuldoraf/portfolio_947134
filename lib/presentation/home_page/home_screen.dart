@@ -25,6 +25,28 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      drawer: Drawer(
+        child: ListView(
+          children: [
+            ListTile(
+                leading: Icon(Icons.home),
+                title: Text('Home'),
+                onTap: () => scrollToContainer(0)),
+            ListTile(
+                leading: Icon(Icons.person),
+                title: Text('Skills'),
+                onTap: () => scrollToContainer(1)),
+            ListTile(
+                leading: Icon(Icons.work),
+                title: Text('Projects'),
+                onTap: () => scrollToContainer(2)),
+            ListTile(
+                leading: Icon(Icons.mail),
+                title: Text('Contact'),
+                onTap: () => scrollToContainer(3)),
+          ],
+        ),
+      ),
       body: CustomScrollView(
         controller: _scrollController,
         slivers: [
@@ -46,49 +68,70 @@ class _HomeScreenState extends State<HomeScreen> {
               onPressed: () => scrollToContainer(0),
             ),
             title: Center(
-              child: Row(
-                children: [
-                  Text('Lind', style: Theme.of(context).textTheme.headlineMedium),
-                  const VerticalDivider(
-                    // FIXME - VerticalDivider is not working as expected -> not visible
-                    color: Colors.grey,
-                    thickness: 10,
-                  ),
-                  TextButton(
-                      onPressed: () => scrollToContainer(0),
-                      child: Text(
-                        'Home',
-                        style: Theme.of(context).textTheme.headlineSmall,
-                      )),
-                  const VerticalDivider(
-                    color: Colors.white,
-                    thickness: 5,
-                  ),
-                  TextButton(
-                      onPressed: () => scrollToContainer(1),
-                      child: Text(
-                        'Skills',
-                        style: Theme.of(context).textTheme.headlineSmall,
-                      )),
-                  const VerticalDivider(
-                    color: Colors.white,
-                    thickness: 5,
-                  ),
-                  TextButton(
-                      onPressed: () => scrollToContainer(2),
-                      child: Text(
-                        'Projects',
-                        style: Theme.of(context).textTheme.headlineSmall,
-                      )),
-                  TextButton(
-                      onPressed: () => scrollToContainer(3),
-                      child: Text(
-                        'Contact',
-                        style: Theme.of(context).textTheme.headlineSmall,
-                      )),
-                  // TODO - Add tailing button for contact and add login button + page
-                ],
-              ),
+              child: MediaQuery.of(context).size.width < 800
+                  ? AppBar(
+                      title: Text(
+                        'Portfolio',
+                        style: Theme.of(context).textTheme.headlineMedium,
+                      ),
+                      leading: Builder(
+                        builder: (BuildContext context) {
+                          return IconButton(
+                            icon: const Icon(Icons.menu),
+                            onPressed: () {
+                              Scaffold.of(context).openDrawer();
+                            },
+                          );
+                        },
+                      ),
+                    )
+                  : Row(
+                      children: [
+                        Text('Lind',
+                            style: Theme.of(context).textTheme.headlineMedium),
+                        const VerticalDivider(
+                          // FIXME - VerticalDivider is not working as expected -> not visible
+                          color: Colors.grey,
+                          thickness: 10,
+                        ),
+                        TextButton(
+                            onPressed: () {
+                              scrollToContainer(0);
+                              Navigator.pop(context);
+                            },
+                            child: Text(
+                              'Home',
+                              style: Theme.of(context).textTheme.headlineSmall,
+                            )),
+                        const VerticalDivider(
+                          color: Colors.white,
+                          thickness: 5,
+                        ),
+                        TextButton(
+                            onPressed: () => scrollToContainer(1),
+                            child: Text(
+                              'Skills',
+                              style: Theme.of(context).textTheme.headlineSmall,
+                            )),
+                        const VerticalDivider(
+                          color: Colors.white,
+                          thickness: 5,
+                        ),
+                        TextButton(
+                            onPressed: () => scrollToContainer(2),
+                            child: Text(
+                              'Projects',
+                              style: Theme.of(context).textTheme.headlineSmall,
+                            )),
+                        TextButton(
+                            onPressed: () => scrollToContainer(3),
+                            child: Text(
+                              'Contact',
+                              style: Theme.of(context).textTheme.headlineSmall,
+                            )),
+                        // TODO - Add tailing button for contact and add login button + page
+                      ],
+                    ),
             ),
             actions: [
               IconButton(

@@ -6,19 +6,35 @@ class HomeContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-            height: MediaQuery.of(context).size.height,
-            width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                colors: [
-                  Colors.green[200]!,
-                  Colors.purple[200]!,
-                ],
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-              ),
-            ),
-            child: Row(
+      height: MediaQuery.of(context).size.height,
+      width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            Colors.green[200]!,
+            Colors.purple[200]!,
+          ],
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+        ),
+      ),
+      child: MediaQuery.of(context).size.width < 800
+          ? Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
+                      width: MediaQuery.of(context).size.width * 0.2,
+                      child: Image.asset('assets/unbenannt.png'),
+                    ),
+                    BioContainer(),
+                  ],
+                ),
+              ],
+            )
+          : Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Column(
@@ -31,11 +47,8 @@ class HomeContainer extends StatelessWidget {
                   width: MediaQuery.of(context).size.width * 0.2,
                   child: Image.asset('assets/unbenannt.png'),
                 ),
-                /* const NavigationButton(name: 'Skills', route: '/skills'),
-                    const NavigationButton(name: 'Projekte', route: '/projects'),
-                    const NavigationButton(name: 'Über mich', route: '/about'), */
               ],
             ),
-          );
+    );
   }
 }

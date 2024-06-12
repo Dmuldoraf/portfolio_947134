@@ -21,21 +21,19 @@ class ProjectOneContainer extends StatelessWidget {
             children: [
               Center(
                   child: Text('Project 1',
-                      style: Theme.of(context).textTheme.headlineLarge)),
+                      style: Theme.of(context).textTheme.headlineMedium)),
               const SizedBox(height: 20),
               Container(
-                height: MediaQuery.of(context).size.height * 0.3,
-                width: MediaQuery.of(context).size.width * 0.4,
-                constraints:  BoxConstraints(minWidth: 100),
-                child: Image.asset('assets/thm_egb.png')),
+                  //constraints: BoxConstraints(minWidth: 100),
+                  child: Image.asset('assets/thm_egb.png')),
               const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text('Praktikum 2',
-                      style: Theme.of(context).textTheme.headlineSmall),const SizedBox(width: 10),
+                      style: Theme.of(context).textTheme.headlineSmall),
+                  const SizedBox(width: 10),
                   IconButton(
-                    
                     icon: const Icon(Icons.arrow_forward),
                     onPressed: () {
                       Navigator.pushNamed(context, '/project_one');

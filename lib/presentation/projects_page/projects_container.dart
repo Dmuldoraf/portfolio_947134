@@ -29,14 +29,13 @@ class ProjectsContainer extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Row(
+          Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 'Projects',
                 style: GoogleFonts.russoOne(
-                    textStyle: const TextStyle(
-                        fontSize: 60, color: Colors.blue, letterSpacing: .5)),
+                    textStyle: Theme.of(context).textTheme.headlineLarge),
               ),
               const SizedBox(
                 width: 10,
@@ -56,8 +55,8 @@ class ProjectsContainer extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const SizedBox(
-                  width: 100,
+                SizedBox(
+                  width: MediaQuery.of(context).size.width > 600 ? 42 : 16,
                 ),
                 GestureDetector(
                   onTap: () {
@@ -65,8 +64,8 @@ class ProjectsContainer extends StatelessWidget {
                   },
                   child: SingleProjectContainer(child: ProjectOneContainer()),
                 ),
-                const SizedBox(
-                  width: 100,
+                SizedBox(
+                  width: MediaQuery.of(context).size.width > 600 ? 42 : 16,
                 ),
                 GestureDetector(
                   onTap: () {
@@ -74,8 +73,8 @@ class ProjectsContainer extends StatelessWidget {
                   },
                   child: SingleProjectContainer(child: ProjectTwoContainer()),
                 ),
-                const SizedBox(
-                  width: 100,
+                SizedBox(
+                  width: MediaQuery.of(context).size.width > 600 ? 42 : 16,
                 ),
                 GestureDetector(
                   onTap: () {
@@ -83,8 +82,8 @@ class ProjectsContainer extends StatelessWidget {
                   },
                   child: SingleProjectContainer(child: ProjectThreeContainer()),
                 ),
-                const SizedBox(
-                  width: 100,
+                SizedBox(
+                  width: MediaQuery.of(context).size.width > 600 ? 42 : 16,
                 ),
                 GestureDetector(
                   onTap: () {
@@ -92,8 +91,8 @@ class ProjectsContainer extends StatelessWidget {
                   },
                   child: SingleProjectContainer(child: ProjectFourContainer()),
                 ),
-                const SizedBox(
-                  width: 100,
+                SizedBox(
+                  width: MediaQuery.of(context).size.width > 600 ? 42 : 16,
                 ),
               ],
             ),

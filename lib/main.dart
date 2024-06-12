@@ -37,21 +37,25 @@ class MyApp extends StatelessWidget {
         textTheme: TextTheme(
           //TODO - outsource theme in theme.dart 
           headlineLarge:  GoogleFonts.russoOne(
-            fontSize: 72,
+            fontSize: MediaQuery.of(context).size.width > 600 ? 72 : 36,
             color: Colors.blue,
             fontWeight: FontWeight.bold,
           ),
           headlineMedium: GoogleFonts.russoOne(
-            fontSize: 32,
+            fontSize: MediaQuery.of(context).size.width > 600 ? 36 : 22,
             color: Colors.blue,
             letterSpacing: .5,
           ),
           headlineSmall: GoogleFonts.russoOne(
-            fontSize: 24,
+            fontSize: MediaQuery.of(context).size.width > 600 ? 24 : 16,
             letterSpacing: .5,
           ),
           bodyMedium: GoogleFonts.russoOne(
-            fontSize: 18,
+            fontSize: MediaQuery.of(context).size.width > 600 ? 18 : 12,
+            letterSpacing: .5,
+          ),
+          bodySmall: GoogleFonts.russoOne(
+            fontSize: MediaQuery.of(context).size.width > 600 ? 14 : 10,
             letterSpacing: .5,
           ),
         ),

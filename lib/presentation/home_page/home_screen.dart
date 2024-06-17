@@ -29,21 +29,36 @@ class _HomeScreenState extends State<HomeScreen> {
         child: ListView(
           children: [
             ListTile(
-                leading: Icon(Icons.home),
-                title: Text('Home'),
-                onTap: () => scrollToContainer(0)),
+                leading:  const Icon(Icons.home),
+                title: Text('Home', style: Theme.of(context).textTheme.bodyMedium,),
+                onTap: () {
+                  scrollToContainer(0);
+                  Navigator.pop(context);
+                }),
             ListTile(
-                leading: Icon(Icons.person),
-                title: Text('Skills'),
-                onTap: () => scrollToContainer(1)),
+                leading:const Icon(Icons.person),
+                title: Text('Skills',style: Theme.of(context).textTheme.bodyMedium,),
+                onTap: () {
+                  scrollToContainer(1);
+                  Navigator.pop(context);
+                }),
             ListTile(
-                leading: Icon(Icons.work),
-                title: Text('Projects'),
-                onTap: () => scrollToContainer(2)),
+                leading:const Icon(Icons.work),
+                title: Text('Projects',style: Theme.of(context).textTheme.bodyMedium,),
+                onTap: () {
+                  scrollToContainer(2);
+                  Navigator.pop(context);
+                }),
             ListTile(
-                leading: Icon(Icons.mail),
-                title: Text('Contact'),
-                onTap: () => scrollToContainer(3)),
+                leading:const Icon(Icons.mail),
+                title: Text(
+                  'Contact',
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+                onTap: () {
+                  scrollToContainer(3);
+                  Navigator.pop(context);
+                }),
           ],
         ),
       ),

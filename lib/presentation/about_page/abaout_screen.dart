@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 class AboutScreenState extends StatelessWidget {
   const AboutScreenState({super.key});
 
@@ -19,17 +18,30 @@ class AboutScreenState extends StatelessWidget {
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        decoration: const BoxDecoration(
-            image: DecorationImage(
-                image: AssetImage("assets/flowers.png"), fit: BoxFit.cover),
-          ),
-        child: const Center(
+        child: Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Placeholder(
-                fallbackHeight: 200,
-                fallbackWidth: 200,
+              const CircleAvatar(
+                radius: 80,
+                backgroundImage:
+                    AssetImage('assets/images/profile_picture.jpg'),
+              ),
+              const SizedBox(height: 20),
+              Text(
+                'Philipp Lind',
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
+              const SizedBox(height: 10),
+              Text(
+                'Software Engineer',
+                style: Theme.of(context).textTheme.headlineMedium,
+              ),
+              const SizedBox(height: 20),
+              Text(
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae nunc vitae nunc.',
+                textAlign: TextAlign.center,
+                style: Theme.of(context).textTheme.headlineSmall,
               ),
             ],
           ),

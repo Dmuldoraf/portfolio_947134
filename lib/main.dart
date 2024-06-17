@@ -48,6 +48,7 @@ class MyApp extends StatelessWidget {
           ),
           headlineSmall: GoogleFonts.russoOne(
             fontSize: MediaQuery.of(context).size.width > 600 ? 24 : 16,
+            color: Colors.blue,
             letterSpacing: .5,
           ),
           bodyMedium: GoogleFonts.russoOne(

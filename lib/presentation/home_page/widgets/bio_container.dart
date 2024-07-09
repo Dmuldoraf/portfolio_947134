@@ -21,20 +21,37 @@ class BioContainer extends StatelessWidget {
               repeatForever: true,
               pause: const Duration(milliseconds: 300),
               animatedTexts: [
-                FadeAnimatedText('My name is Giovanni Giorgio',
+                TypewriterAnimatedText('Entwickler',
                     textStyle: Theme.of(context).textTheme.headlineMedium),
-                FadeAnimatedText('but everybody calls me',
+                TypewriterAnimatedText('Student',
                     textStyle: Theme.of(context).textTheme.headlineMedium),
-                FadeAnimatedText('Giorgio!',
+                TypewriterAnimatedText('Kraftfahrer',
                     textStyle: Theme.of(context).textTheme.headlineMedium),
               ],
             ),
           ),
           const SizedBox(height: 16.0),
-          Text(
-            'I am a Thm student with the ambition to get the maximum points for the internship.',
-            style: Theme.of(context).textTheme.bodyMedium,
-          ),
+          // TODO - Change background, indent and line breaks
+            Stack(
+              alignment: Alignment.center,
+              children: [
+                Image.asset(
+                  'assets/text_background1.png',
+                  fit: BoxFit.fill,
+                  height: MediaQuery.of(context).size.height * 0.8,
+                  width: MediaQuery.of(context).size.width * 0.8,
+                ),
+                Container(
+                  padding: EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.2, right:MediaQuery.of(context).size.width * 0.2),
+                  child: Text(
+                    'Ich bin Student an der technischen Hochschule Mittelhessen und arbeite in Teilzeit bei den Stadtwerken Gießen als Softwareentwickler. Mein Interesse gilt neuen, innovativen und nachhaltigen Projekten. Vor und anfangs während meines Studiums arbeitete ich als Maschinenführer eines Diamant 2000 und Kraftfahrer.',
+                    style: Theme.of(context).textTheme.bodyMedium,
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ],
+            ),
+          
           const SizedBox(height: 16.0),
           MediaQuery.of(context).size.width < 1000
               ? Column(

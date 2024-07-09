@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "901994005057",
+    "project_id": "portfolio-egb",
+    "storage_bucket": "portfolio-egb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:901994005057:android:82f56da72f65295416bcc0",
+        "android_client_info": {
+          "package_name": "com.example.portfolio_947134"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDUrZ7wYut0rCHXlY0jeZNQD1MGqewqm4o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

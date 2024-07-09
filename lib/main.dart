@@ -7,6 +7,7 @@ import 'package:portfolio_947134/presentation/skill_page/empty_screen.dart';
 import 'package:google_fonts/google_fonts.dart';
 /* 
 https://portfolio-ak-ba4da.web.app/ 
+https://www.qualcugu.com/
 */
 
 /* import 'uebungen/uebung1.dart';
@@ -73,3 +74,10 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+/* 
+web       1:901994005057:web:fa3370a5201cc85316bcc0
+android   1:901994005057:android:82f56da72f65295416bcc0
+ios       1:901994005057:ios:bf501331a5b74a7d16bcc0
+macos     1:901994005057:ios:bf501331a5b74a7d16bcc0
+windows   1:901994005057:web:537b6c1e34cb76c316bcc0 */

@@ -11,7 +11,7 @@ class BioContainer extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Hi! I'm Philipp Lind",
+            "Hi!\nIch bin Philipp Lind.",
             style: Theme.of(context).textTheme.headlineMedium,
           ),
           const SizedBox(height: 8.0),
@@ -19,14 +19,14 @@ class BioContainer extends StatelessWidget {
             height: 50,
             child: AnimatedTextKit(
               repeatForever: true,
-              pause: const Duration(milliseconds: 300),
+              pause: const Duration(milliseconds: 900),
               animatedTexts: [
                 TypewriterAnimatedText('Entwickler',
-                    textStyle: Theme.of(context).textTheme.headlineMedium),
+                    textStyle: Theme.of(context).textTheme.headlineMedium, speed: const Duration(milliseconds: 100)),
                 TypewriterAnimatedText('Student',
-                    textStyle: Theme.of(context).textTheme.headlineMedium),
+                    textStyle: Theme.of(context).textTheme.headlineMedium,speed: const Duration(milliseconds: 100)),
                 TypewriterAnimatedText('Kraftfahrer',
-                    textStyle: Theme.of(context).textTheme.headlineMedium),
+                    textStyle: Theme.of(context).textTheme.headlineMedium,speed: const Duration(milliseconds: 100)),
               ],
             ),
           ),
@@ -35,16 +35,16 @@ class BioContainer extends StatelessWidget {
             Stack(
               alignment: Alignment.center,
               children: [
-                Image.asset(
+/*                 Image.asset(
                   'assets/text_background1.png',
                   fit: BoxFit.fill,
                   height: MediaQuery.of(context).size.height * 0.8,
                   width: MediaQuery.of(context).size.width * 0.8,
-                ),
+                ), */
                 Container(
                   padding: EdgeInsets.only(left: MediaQuery.of(context).size.width * 0.2, right:MediaQuery.of(context).size.width * 0.2),
                   child: Text(
-                    'Ich bin Student an der technischen Hochschule Mittelhessen und arbeite in Teilzeit bei den Stadtwerken Gießen als Softwareentwickler. Mein Interesse gilt neuen, innovativen und nachhaltigen Projekten. Vor und anfangs während meines Studiums arbeitete ich als Maschinenführer eines Diamant 2000 und Kraftfahrer.',
+                    'Ich bin Student an der technischen Hochschule Mittelhessen und arbeite in Teilzeit bei den Stadtwerken Gießen als Softwareentwickler. Mein Interesse gilt neuen, innovativen und nachhaltigen Projekten. Vor und zu Beginn meines Studiums arbeitete ich als Fahrer eines Diamant 2000 und LKW-Fahrer.',
                     style: Theme.of(context).textTheme.bodyMedium,
                     textAlign: TextAlign.center,
                   ),

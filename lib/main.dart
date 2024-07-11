@@ -9,16 +9,11 @@ import 'package:portfolio_947134/themes.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 /* 
-https://portfolio-ak-ba4da.web.app/ 
-https://www.qualcugu.com/
+Meine Website:
+https://portfolio-egb.web.app/
 */
 
-/* import 'uebungen/uebung1.dart'; 
-import 'uebungen/uebung2.dart'; */
-
 void main() async {
-  // Uebungen mit Ausgabe in Console
-  // alleAufgabenUebung2();
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
@@ -32,11 +27,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'EgB Uebung',
+      title: 'EgB Praktikum',
       debugShowCheckedModeBanner: false,
       theme: MyTheme.lightTheme,
       initialRoute: '/',
-      // TODO - implement responsive design to prevent overflow when resizing the window
       routes: {
         '/': (context) => const HomeScreen(),
         '/about': (context) => const AboutScreenState(),
@@ -47,3 +41,9 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+/* 
+https://portfolio-ak-ba4da.web.app/ 
+https://www.qualcugu.com/
+ */

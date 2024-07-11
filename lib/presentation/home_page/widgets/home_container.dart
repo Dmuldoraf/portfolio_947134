@@ -25,11 +25,9 @@ class HomeContainer extends StatelessWidget {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.2,
-                      child: Image.asset('assets/unbenannt.png'),
-                    ),
                     BioContainer(),
+                    
+                    
                   ],
                 ),
               ],

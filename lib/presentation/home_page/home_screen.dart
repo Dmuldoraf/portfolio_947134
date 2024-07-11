@@ -102,13 +102,6 @@ class _HomeScreenState extends State<HomeScreen> {
                     )
                   : Row(
                       children: [
-                        Text('Lind',
-                            style: Theme.of(context).textTheme.headlineMedium),
-                        const VerticalDivider(
-                          // FIXME - VerticalDivider is not working as expected -> not visible
-                          color: Colors.grey,
-                          thickness: 10,
-                        ),
                         TextButton(
                             onPressed: () {
                               scrollToContainer(0);

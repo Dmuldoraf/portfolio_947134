@@ -1,6 +1,10 @@
 # Do not remove or rename entries in this file, only add new ones
 # See https://github.com/flutter/flutter/issues/128635 for more context.
 
+# Custom
+/android/node_modules/
+.firebase
+
 # Miscellaneous
 *.class
 *.lock
@@ -13,6 +17,7 @@
 .history
 .svn/
 .assets/*
+
 
 # IntelliJ related
 *.iml

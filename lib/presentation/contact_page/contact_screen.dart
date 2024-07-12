@@ -40,58 +40,81 @@ class _ContactFormState extends State<ContactForm> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height,
-      width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Colors.blue[200]!,
-            Colors.green[200]!,
-          ],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
+    return Stack(
+      children: [
+        ConstrainedBox(
+          constraints: BoxConstraints(
+            minHeight: 800,
+            minWidth: MediaQuery.of(context).size.width,
+          ),
+          child: Image.asset('assets/cyan_5_noise.png',
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              fit: BoxFit.cover),
         ),
-      ),
-      child:  Padding(
-        padding: const EdgeInsets.all(80.0),
-        child: SizedBox(
-          width: 400,
-          height: 600,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Text(
-                    'Get in touch',
-                    style: Theme.of(context).textTheme.headlineMedium,
-                  ),
-                  const SizedBox(width: 8.0),
-                  GestureDetector(
-                    onTap: _handleSubmit,
-                    child: const CircleAvatar(
-                      radius: 12.0,
-                      backgroundColor: Colors.black,
-                      child: Icon(
-                        Icons.arrow_forward,
-                        color: Colors.white,
-                        size: 16.0,
-                      ),
-                    ),
-                  ),
-                ],
+        ConstrainedBox(
+          constraints: BoxConstraints(
+            minHeight: 800,
+            minWidth: MediaQuery.of(context).size.width,
+          ),
+          child: Container(
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            decoration: const BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                  color: Colors.black,
+                  width: 5,
+                ),
               ),
-              const SizedBox(height: 24.0),
-              ContactTextField(controller: _nameController, label: 'Your Name'),
-              ContactTextField(controller: _emailController, label: 'Email'),
-              ContactTextField(controller: _subjectController, label: 'Subject'),
-              ContactTextField(
-                  controller: _messageController, label: 'Message', maxLines: 5),
-            ],
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(80.0),
+              child: SizedBox(
+                width: 400,
+                height: 600,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          'Get in touch',
+                          style: Theme.of(context).textTheme.headlineMedium,
+                        ),
+                        const SizedBox(width: 8.0),
+                        GestureDetector(
+                          onTap: _handleSubmit,
+                          child: const CircleAvatar(
+                            radius: 12.0,
+                            backgroundColor: Colors.black,
+                            child: Icon(
+                              Icons.arrow_forward,
+                              color: Colors.white,
+                              size: 16.0,
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 24.0),
+                    ContactTextField(
+                        controller: _nameController, label: 'Your Name'),
+                    ContactTextField(
+                        controller: _emailController, label: 'Email'),
+                    ContactTextField(
+                        controller: _subjectController, label: 'Subject'),
+                    ContactTextField(
+                        controller: _messageController,
+                        label: 'Message',
+                        maxLines: 5),
+                  ],
+                ),
+              ),
+            ),
           ),
         ),
-      ),
+      ],
     );
   }
 }

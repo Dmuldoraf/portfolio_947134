@@ -34,13 +34,12 @@ class _ProjectScreenState extends State<ProjectScreen> {
         height: double.infinity,
         width: double.infinity,
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            colors: [
-              Colors.orange[200]!,
-              Colors.purple[200]!,
-            ],
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
+          color: Colors.orange[100],
+          border: const Border(
+            bottom: BorderSide(
+              color: Colors.black,
+              width: 5,
+            ),
           ),
         ),
         child: Stack(
@@ -55,7 +54,7 @@ class _ProjectScreenState extends State<ProjectScreen> {
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         Center(
-                          child: Text('THM Entwicklung grafischer Benutzeroberflächen', style: Theme.of(context).textTheme.headlineMedium),
+                          child: Text('THM Entwicklung grafischer Bedienoberflächen', style: Theme.of(context).textTheme.headlineMedium),
                         ),
                         Center(
                           child: Image.asset('assets/thm_egb.png')

@@ -11,7 +11,7 @@ class SingleProjectContainer extends StatelessWidget {
     return Container(
       height: MediaQuery.of(context).size.height *0.6,
       constraints:const BoxConstraints(
-        minHeight: 400,
+        minHeight: 600,
       ),
           
       width: MediaQuery.of(context).size.width > 800

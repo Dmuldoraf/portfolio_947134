@@ -25,49 +25,58 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            ListTile(
-                leading:  const Icon(Icons.home),
-                title: Text('Home', style: Theme.of(context).textTheme.bodyMedium,),
-                onTap: () {
-                  scrollToContainer(0);
-                  Navigator.pop(context);
-                }),
-            ListTile(
-                leading:const Icon(Icons.person),
-                title: Text('Skills',style: Theme.of(context).textTheme.bodyMedium,),
-                onTap: () {
-                  scrollToContainer(1);
-                  Navigator.pop(context);
-                }),
-            ListTile(
-                leading:const Icon(Icons.work),
-                title: Text('Projects',style: Theme.of(context).textTheme.bodyMedium,),
-                onTap: () {
-                  scrollToContainer(2);
-                  Navigator.pop(context);
-                }),
-            ListTile(
-                leading:const Icon(Icons.mail),
-                title: Text(
-                  'Contact',
-                  style: Theme.of(context).textTheme.bodyMedium,
-                ),
-                onTap: () {
-                  scrollToContainer(3);
-                  Navigator.pop(context);
-                }),
-          ],
-        ),
-      ),
+      drawer: MediaQuery.of(context).size.width < 800
+          ? Drawer(
+              child: ListView(
+                children: [
+                  ListTile(
+                      leading: const Icon(Icons.home),
+                      title: Text(
+                        'Home',
+                        style: Theme.of(context).textTheme.bodyMedium,
+                      ),
+                      onTap: () {
+                        scrollToContainer(0);
+                        Navigator.pop(context);
+                      }),
+                  ListTile(
+                      leading: const Icon(Icons.person),
+                      title: Text(
+                        'Skills',
+                        style: Theme.of(context).textTheme.bodyMedium,
+                      ),
+                      onTap: () {
+                        scrollToContainer(1);
+                        Navigator.pop(context);
+                      }),
+                  ListTile(
+                      leading: const Icon(Icons.work),
+                      title: Text(
+                        'Projects',
+                        style: Theme.of(context).textTheme.bodyMedium,
+                      ),
+                      onTap: () {
+                        scrollToContainer(2);
+                        Navigator.pop(context);
+                      }),
+                  ListTile(
+                      leading: const Icon(Icons.mail),
+                      title: Text(
+                        'Contact',
+                        style: Theme.of(context).textTheme.bodyMedium,
+                      ),
+                      onTap: () {
+                        scrollToContainer(3);
+                        Navigator.pop(context);
+                      }),
+                ],
+              ),
+            )
+          : null,
       body: CustomScrollView(
         controller: _scrollController,
         slivers: [
           SliverAppBar(
-            // FIXME - title and other widgets are not centered
-            // expandedHeight: 100.0,
             shape: const RoundedRectangleBorder(
               side: BorderSide(color: Colors.grey, width: 1),
             ),
@@ -76,29 +85,11 @@ class _HomeScreenState extends State<HomeScreen> {
             snap: true,
             pinned: false,
             centerTitle: true,
-            leading: IconButton(
-              icon: const CircleAvatar(
-                backgroundImage: AssetImage('assets/flowers.png'),
-              ),
-              onPressed: () => scrollToContainer(0),
-            ),
             title: Center(
               child: MediaQuery.of(context).size.width < 800
-                  ? AppBar(
-                      title: Text(
-                        'Portfolio',
-                        style: Theme.of(context).textTheme.headlineMedium,
-                      ),
-                      leading: Builder(
-                        builder: (BuildContext context) {
-                          return IconButton(
-                            icon: const Icon(Icons.menu),
-                            onPressed: () {
-                              Scaffold.of(context).openDrawer();
-                            },
-                          );
-                        },
-                      ),
+                  ? Text(
+                      'Portfolio',
+                      style: Theme.of(context).textTheme.headlineMedium,
                     )
                   : Row(
                       children: [
@@ -109,7 +100,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             },
                             child: Text(
                               'Home',
-                              style: Theme.of(context).textTheme.headlineSmall,
+                              style: Theme.of(context).textTheme.headlineMedium,
                             )),
                         const VerticalDivider(
                           color: Colors.white,
@@ -119,7 +110,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             onPressed: () => scrollToContainer(1),
                             child: Text(
                               'Skills',
-                              style: Theme.of(context).textTheme.headlineSmall,
+                              style: Theme.of(context).textTheme.headlineMedium,
                             )),
                         const VerticalDivider(
                           color: Colors.white,
@@ -129,13 +120,13 @@ class _HomeScreenState extends State<HomeScreen> {
                             onPressed: () => scrollToContainer(2),
                             child: Text(
                               'Projects',
-                              style: Theme.of(context).textTheme.headlineSmall,
+                              style: Theme.of(context).textTheme.headlineMedium,
                             )),
                         TextButton(
                             onPressed: () => scrollToContainer(3),
                             child: Text(
                               'Contact',
-                              style: Theme.of(context).textTheme.headlineSmall,
+                              style: Theme.of(context).textTheme.headlineMedium,
                             )),
                         // TODO - Add tailing button for contact and add login button + page
                       ],
@@ -143,7 +134,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             actions: [
               IconButton(
-                icon: Icon(Icons.arrow_downward),
+                icon: const Icon(Icons.arrow_downward),
                 onPressed: () => scrollToContainer(3),
               ),
             ],

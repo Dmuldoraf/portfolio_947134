@@ -42,6 +42,19 @@ class MyApp extends StatelessWidget {
   }
 }
 
+/*  Mobile ansicht */
+// Done Portfolio Bild weg
+// Done Textfield in BioContainer zu schmal in der mobilen Ansicht kann breiter
+// Done Skills fehlt padding rechts in zweiter row
+// TODO Header Projects zu wenig Platz
+// TODO Hold Shift to scroll horizontally nur für mobile anzeigen
+// TODO Projekte neu und Routing in Projekt 1
+// TODO in About Screen Bild fehlt
+/*  Allgemein  */
+// TODO Curriculum Screen neu
+// TODO 
+
+
 
 /* 
 https://portfolio-ak-ba4da.web.app/ 

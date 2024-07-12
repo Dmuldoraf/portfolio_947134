@@ -10,19 +10,21 @@ class MyTheme {
       brightness: Brightness.light,
     ),
     textTheme: TextTheme(
-      headlineLarge: GoogleFonts.russoOne(
+      headlineLarge: GoogleFonts.rubikDoodleShadow(
         fontSize: 72,
-        color: Colors.blue,
+        //color: Colors.deepPurple[300],
         fontWeight: FontWeight.bold,
       ),
-      headlineMedium: GoogleFonts.russoOne(
+      headlineMedium: GoogleFonts.rubikDoodleShadow(
         fontSize: 36,
-        color: Colors.blue,
+        //color: Colors.deepPurple[300],
+        fontWeight: FontWeight.bold,
         letterSpacing: .5,
       ),
-      headlineSmall: GoogleFonts.russoOne(
+      headlineSmall: GoogleFonts.rubikDoodleShadow(
         fontSize: 24,
-        color: Colors.blue,
+        //color: Colors.deepPurple[300],
+        fontWeight: FontWeight.bold,
         letterSpacing: .5,
       ),
       bodyMedium: GoogleFonts.russoOne(

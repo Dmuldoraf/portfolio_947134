@@ -5,48 +5,44 @@ import 'package:portfolio_947134/presentation/home_page/widgets/bio_container.da
 class HomeContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height,
-      width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Colors.green[200]!,
-            Colors.purple[200]!,
-          ],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
-        ),
+    return ConstrainedBox(
+      constraints: BoxConstraints(
+        minHeight: 1000,
+        minWidth: MediaQuery.of(context).size.width,
       ),
-      child: MediaQuery.of(context).size.width < 800
-          ? Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    BioContainer(),
-                    
-                    
-                  ],
-                ),
-              ],
-            )
-          : Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    BioContainer(),
-                  ],
-                ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.2,
-                  child: Image.asset('assets/unbenannt.png'),
-                ),
-              ],
+      child: Stack(
+        children: [
+          ConstrainedBox(
+            constraints: BoxConstraints(
+              minHeight: 1000,
+              minWidth: MediaQuery.of(context).size.width,
             ),
+            child: Image.asset('assets/mint_5_noise.png',
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+                fit: BoxFit.cover),
+          ),
+          ConstrainedBox(
+            constraints: BoxConstraints(
+              minHeight: 1000,
+              minWidth: MediaQuery.of(context).size.width,
+            ),
+            child: Container(
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+                decoration: const BoxDecoration(
+                  border: Border(
+                    bottom: BorderSide(
+                      color: Colors.black,
+                      width: 5,
+                    ),
+                  ),
+                  //color:Colors.green[100]!,
+                ),
+                child: BioContainer()),
+          ),
+        ],
+      ),
     );
   }
 }

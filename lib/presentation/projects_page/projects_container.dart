@@ -1,6 +1,5 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:portfolio_947134/presentation/projects_page/widgets/projects/project_four_container.dart';
 import 'package:portfolio_947134/presentation/projects_page/widgets/projects/project_one_container.dart';
 import 'package:portfolio_947134/presentation/projects_page/widgets/projects/project_three_container.dart';
@@ -13,92 +12,119 @@ class ProjectsContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: MediaQuery.of(context).size.height,
-      width: MediaQuery.of(context).size.width,
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Colors.orange[200]!,
-            Colors.blue[200]!,
-          ],
-          begin: Alignment.topCenter,
-          end: Alignment.bottomCenter,
+    return Stack(
+      children: [
+        ConstrainedBox(
+          constraints: BoxConstraints(
+            minHeight: 1000,
+            minWidth: MediaQuery.of(context).size.width,
+          ),
+          child: Image.asset('assets/orange_7_noise.png',
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              fit: BoxFit.cover),
         ),
-      ),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'Projects',
-                style: GoogleFonts.russoOne(
-                    textStyle: Theme.of(context).textTheme.headlineLarge),
-              ),
-              const SizedBox(
-                width: 10,
-              ),
-              Text(
-                '(Hold shift to scroll with mouse wheel)',
-                style: Theme.of(context).textTheme.bodyMedium,
-              )
-            ],
+        ConstrainedBox(
+          constraints: BoxConstraints(
+            minHeight: 1000,
+            minWidth: MediaQuery.of(context).size.width,
           ),
-          const SizedBox(
-            height: 100,
-          ),
-          SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            controller: _scrollController,
-            child: Row(
+          child: Container(
+            height: MediaQuery.of(context).size.height,
+            width: MediaQuery.of(context).size.width,
+            decoration: const BoxDecoration(
+              border: Border(
+                bottom: BorderSide(
+                  color: Colors.black,
+                  width: 5,
+                ),
+              ),
+            ),
+            child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width > 600 ? 42 : 16,
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Projects',
+                      style: Theme.of(context).textTheme.headlineLarge,
+                    ),
+                    const SizedBox(
+                      width: 10,
+                    ),
+                    MediaQuery.of(context).size.width > 600 
+                    ? Text(
+                      '(Hold shift to scroll with mouse wheel)',
+                      style: Theme.of(context).textTheme.bodyMedium,
+                    ): const Text('')
+                  ],
                 ),
-                GestureDetector(
-                  onTap: () {
-                    // Add your code to slide the container to the middle
-                  },
-                  child: SingleProjectContainer(child: ProjectOneContainer()),
+                const SizedBox(
+                  height: 100,
                 ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width > 600 ? 42 : 16,
-                ),
-                GestureDetector(
-                  onTap: () {
-                    // Add your code to slide the container to the middle
-                  },
-                  child: SingleProjectContainer(child: ProjectTwoContainer()),
-                ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width > 600 ? 42 : 16,
-                ),
-                GestureDetector(
-                  onTap: () {
-                    // Add your code to slide the container to the middle
-                  },
-                  child: SingleProjectContainer(child: ProjectThreeContainer()),
-                ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width > 600 ? 42 : 16,
-                ),
-                GestureDetector(
-                  onTap: () {
-                    // Add your code to slide the container to the middle
-                  },
-                  child: SingleProjectContainer(child: ProjectFourContainer()),
-                ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width > 600 ? 42 : 16,
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  controller: _scrollController,
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      SizedBox(
+                        width:
+                            MediaQuery.of(context).size.width > 600 ? 42 : 16,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          // Add your code to slide the container to the middle
+                        },
+                        child: SingleProjectContainer(
+                            child: ProjectOneContainer()),
+                      ),
+                      SizedBox(
+                        width:
+                            MediaQuery.of(context).size.width > 600 ? 42 : 16,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          // Add your code to slide the container to the middle
+                        },
+                        child: SingleProjectContainer(
+                            child: ProjectTwoContainer()),
+                      ),
+                      SizedBox(
+                        width:
+                            MediaQuery.of(context).size.width > 600 ? 42 : 16,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          // Add your code to slide the container to the middle
+                        },
+                        child: SingleProjectContainer(
+                            child: ProjectThreeContainer()),
+                      ),
+                      SizedBox(
+                        width:
+                            MediaQuery.of(context).size.width > 600 ? 42 : 16,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          // Add your code to slide the container to the middle
+                        },
+                        child: SingleProjectContainer(
+                            child: ProjectFourContainer()),
+                      ),
+                      SizedBox(
+                        width:
+                            MediaQuery.of(context).size.width > 600 ? 42 : 16,
+                      ),
+                    ],
+                  ),
                 ),
               ],
             ),
           ),
-        ],
-      ),
+        ),
+      ],
     );
   }
 }

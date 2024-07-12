@@ -17,11 +17,11 @@ class _SkillScreenState extends State<SkillScreen> {
         body: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
-          decoration: const BoxDecoration(
+          decoration:  BoxDecoration(
             gradient: LinearGradient(
               colors: [
                 Colors.orangeAccent,
-                Colors.purpleAccent,
+                Colors.purple[100]!,
               ],
               begin: Alignment.topCenter,
               end: Alignment.bottomCenter,

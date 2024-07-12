@@ -33,7 +33,7 @@ class ProjectTwoContainer extends StatelessWidget {
                   onPressed: () =>
                       {Navigator.pushNamed(context, '/curriculum')},
                   child: Text(
-                    'Curiculum',
+                    'Curriculum',
                     style: Theme.of(context).textTheme.bodyMedium,
                   )),
               const SizedBox(height: 20),

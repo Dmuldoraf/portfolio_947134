@@ -10,7 +10,7 @@ class AboutScreenState extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         centerTitle: true,
-        title: Text('Über mich',
+        title: Text('About',
             style: GoogleFonts.russoOne(
                 textStyle: const TextStyle(
                     fontSize: 32, color: Colors.blue, letterSpacing: .5))),
@@ -25,7 +25,7 @@ class AboutScreenState extends StatelessWidget {
               const CircleAvatar(
                 radius: 80,
                 backgroundImage:
-                    AssetImage('assets/images/profile_picture.jpg'),
+                    AssetImage('assets/plip_hope1.png'),
               ),
               const SizedBox(height: 20),
               Text(

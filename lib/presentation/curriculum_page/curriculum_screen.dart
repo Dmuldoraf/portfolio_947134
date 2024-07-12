@@ -7,15 +7,10 @@ class CurriculumScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: DecoratedBox(
-        decoration:  BoxDecoration(
+        decoration: const BoxDecoration(
           image: DecorationImage(
-            image:const  AssetImage(
-              "assets/flowers.png",
-            ),
-            colorFilter: ColorFilter.mode(
-              Colors.black.withOpacity(0.5),
-              BlendMode.darken,
-            ),
+            image: AssetImage('assets/grey_7_noise.png'),
+            fit: BoxFit.cover,
           ),
         ),
         child: SizedBox(

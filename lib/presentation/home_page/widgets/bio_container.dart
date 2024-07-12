@@ -48,10 +48,7 @@ class BioContainer extends StatelessWidget {
                       ),
                       child: Container(
                         decoration: BoxDecoration(
-                          image: const DecorationImage(
-                            image: AssetImage('assets/grey_7_noise.png'),
-                            fit: BoxFit.cover,
-                          ),
+                          color: Colors.white,
                           borderRadius: BorderRadius.circular(8.0),
                           border: Border.all(
                             color: Colors.black,
@@ -61,7 +58,7 @@ class BioContainer extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.all(16.0),
                           child: Text(
-                            'I am a student at the Technical University of Central Hesse and work part-time at the Gießen Municipal Utilities as a software developer. My interest lies in new, innovative, and sustainable projects. Before and at the beginning of my studies, I worked as a driver of a Diamant 2000 and a truck driver.',
+                            'I am a student at the Technische Hochschule Mittelhessen and work part-time at the Gießen Municipal Utilities as a software developer. My interest lies in new, innovative, and sustainable projects. Before and at the beginning of my studies, I worked as a driver of a Diamant 2000 and a truck driver.',
                             style: Theme.of(context).textTheme.bodyMedium,
                             textAlign: TextAlign.justify,
                           ),
@@ -161,7 +158,7 @@ class BioContainer extends StatelessWidget {
                             child: Padding(
                               padding: const EdgeInsets.all(16.0),
                               child: Text(
-                                'I am a student at the Technical University of Central Hesse and work part-time at the Gießen Municipal Utilities as a software developer. My interest lies in new, innovative, and sustainable projects. Before and at the beginning of my studies, I worked as a driver of a Diamant 2000 and a truck driver.',
+                                'I am a student at the Technische Hochschule Mittelhessen and work part-time at the Gießen Municipal Utilities as a software developer. My interest lies in new, innovative, and sustainable projects. Before and at the beginning of my studies, I worked as a driver of a Diamant 2000 and a truck driver.',
                                 style: Theme.of(context).textTheme.bodyMedium,
                                 textAlign: TextAlign.justify,
                               ),

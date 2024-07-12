@@ -15,9 +15,10 @@ class _HomeScreenState extends State<HomeScreen> {
   final _scrollController = ScrollController();
 
   void scrollToContainer(int index) {
-    final screenHeight = MediaQuery.of(context).size.height;
+    final screenHeight = (MediaQuery.of(context).size.height < 1000 ? 1000 : MediaQuery.of(context).size.height).toDouble();
     debugPrint('Screen Height: $screenHeight');
     debugPrint(index.toString());
+    // FIXME: Navigation not accurate
     _scrollController.animateTo(screenHeight * index,
         duration: const Duration(milliseconds: 500), curve: Curves.easeInOut);
   }
@@ -96,7 +97,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         TextButton(
                             onPressed: () {
                               scrollToContainer(0);
-                              Navigator.pop(context);
+                              
                             },
                             child: Text(
                               'Home',

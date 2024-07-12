@@ -5,44 +5,46 @@ class ProjectTwoContainer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          gradient: LinearGradient(
-            colors: [
-              Colors.yellowAccent[400]!,
-              Colors.greenAccent[400]!,
-            ],
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
+          borderRadius: BorderRadius.circular(8),
+          image: const DecorationImage(
+            image: AssetImage('assets/mint_5_noise.png'),
+            fit: BoxFit.cover,
+          ),
+          border: Border.all(
+            color: Colors.black,
+            width: 5,
           ),
         ),
         child: Padding(
           padding: const EdgeInsets.all(20.0),
           child: Center(
               child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Text('Routing', style: Theme.of(context).textTheme.headlineMedium),
-              const SizedBox(height: 20),
+              Text('Hacken', style: Theme.of(context).textTheme.headlineMedium),
+              ConstrainedBox(
+                  constraints: const BoxConstraints(maxHeight: 300),
+                  child: Image.asset('assets/hacker_hope_front.png')),
               ElevatedButton(
-                  onPressed: () => {Navigator.pushNamed(context, '/about')},
-                  child: Text(
-                    'About',
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  )),
-              const SizedBox(height: 20),
-              ElevatedButton(
-                  onPressed: () =>
-                      {Navigator.pushNamed(context, '/curriculum')},
-                  child: Text(
-                    'Curriculum',
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  )),
-              const SizedBox(height: 20),
-              ElevatedButton(
-                  onPressed: () => {Navigator.pushNamed(context, '/project_one')},
-                  child: Text(
-                    'Projects',
-                    style: Theme.of(context).textTheme.bodyMedium,
-                  ))
+                onPressed: () {
+                  Navigator.pushNamed(context, '/project_two');
+                },
+                style: ElevatedButton.styleFrom(
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 24.0, vertical: 12.0),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(8.0),
+                    side: const BorderSide(
+                      color: Colors.black, // Border color
+                      width: 2.0, // Border width
+                    ),
+                  ),
+                ),
+                child: Text(
+                  'Hack it!',
+                  style: Theme.of(context).textTheme.bodyMedium,
+                ),
+              ),
             ],
           )),
         ));

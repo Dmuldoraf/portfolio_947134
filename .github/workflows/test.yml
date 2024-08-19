@@ -22,3 +22,5 @@ jobs:
           - run: flutter --version
           - run: flutter pub get
           - run: flutter test
+          - name: Debug output
+            run: echo "Workflow completed successfully and ready to trigger next workflow."

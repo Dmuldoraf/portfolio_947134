@@ -8,6 +8,7 @@ import 'package:portfolio_947134/presentation/projects_page/project_two_screen%2
 import 'package:portfolio_947134/presentation/skill_page/empty_screen.dart';
 import 'package:portfolio_947134/themes.dart';
 import 'package:firebase_core/firebase_core.dart';
+//import 'package:portfolio_947134/uebungen/uebung2.dart';
 
 /* 
 Meine Website:
@@ -15,6 +16,8 @@ https://portfolio-egb.web.app/
 */
 
 void main() async {
+  // alleAufgabenUebung2();
+
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,

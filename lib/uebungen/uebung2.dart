@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'dart:async';
 
 void alleAufgabenUebung2() {
   uebung2Aufgabe1();
@@ -18,8 +19,12 @@ void uebung2Aufgabe1() {
   var zahl = 5;
   final wort = 'Hallo';
 
-  print(zahl.toString() + ': ' + (zahl.runtimeType.toString()));
-  print(wort.toString() + ': ' + (wort.runtimeType.toString()));
+  // Dart inferiert den Typ der Variablen aufgrund des initialen Wertes
+  // zahl ist vom Typ int, weil der initiale Wert 5 eine Ganzzahl ist
+  // wort ist vom Typ String, weil der initiale Wert "Hallo" ein String ist
+
+  print('${zahl.toString()}: ${(zahl.runtimeType.toString())}');
+  print('${wort.toString()}: ${(wort.runtimeType.toString())}');
 }
 
 void uebung2Aufgabe2() {
@@ -28,7 +33,7 @@ void uebung2Aufgabe2() {
   */
   Auto a1 = Auto(marke: 'VW', modell: 'Golf', baujahr: 1994);
   var date = DateTime.now();
-  print('Alter des ${a1.marke}\'s: ' + (date.year - a1.baujahr).toString());
+  print('Alter des ${a1.marke}\'s: ${(date.year - a1.baujahr).toString()}');
 }
 
 class Auto {
@@ -47,6 +52,7 @@ uebung2Aufgabe3() {
   var td3 = (int zahl) {
     return ((zahl % 3) == 0);
   }; // td3 - teilbar durch 3
+
   for (int i = 0; i < 10; i++) {
     numbers.add(rnd.nextInt(30));
   }
@@ -63,33 +69,48 @@ uebung2Aufgabe3() {
   print('Reduce: \n${numbers}\nSumme: ${sum}');
 }
 
-uebung2Aufgabe4() async{
+uebung2Aufgabe4() async {
   /* ## Aufgabe 4: Asynchrone Programmierung
 **Beschreibung:** Schreibe eine asynchrone Funktion, die zufällig entscheidet, ob eine Operation erfolgreich war oder nicht, und wirf eine Ausnahme im Fehlerfall. Verwende `try`, `catch` und `finally` zur Fehlerbehandlung und drucke das Ergebnis oder den Fehler.
  */
-try{
-  
-}
-catch(e){
-  print('Error: $e');
-}
-finally{
-print('');
-}
+  try {
+    Random rnd = Random();
+    var success = rnd.nextBool();
+    if (!success) {
+      throw Exception('Operation failed');
+    }
+    print('Operation successful');
+  } catch (e) {
+    print('Error: $e');
+  } finally {
+    print('asd');
+  }
 }
 
-uebung2Aufgabe5() {}
 /* ## Aufgabe 5: Streams und Isolates
 **Beschreibung:** Erstelle einen Stream, der fortlaufend Zahlen emittiert. Verbrauche diesen Stream in einem Isolate und drucke jede Zahl mit einer Verzögerung von einer Sekunde.
  */
-uebung2Aufgabe6() {}
+
+uebung2Aufgabe5() {
+  Stream<int> numberStream = Stream<int>.periodic(Duration(seconds: 1), (count) => count);
+  numberStream.listen((number) {
+    print(number);
+  });
+}
+
+uebung2Aufgabe6() {
 /* ## Aufgabe 6: Metaprogrammierung
 **Beschreibung:** Nutze die `mirrors` Bibliothek, um alle Methoden einer Klasse zu inspizieren, die du in einer früheren Aufgabe definiert hast. Drucke die Namen dieser Methoden.
  */
+
+}
+
+
 uebung2Aufgabe7() {}
 /* ## Aufgabe 7: Generics und Collections
 **Beschreibung:** Erstelle eine generische Klasse `Box<T>`, die irgendeinen Inhalt speichern kann. Füge Methoden zum Speichern und Abrufen des Inhalts hinzu. Demonstriere die Nutzung dieser Box mit mindestens zwei verschiedenen Datentypen.
  */
+
 uebung2Aufgabe8() {}
 /* ## Aufgabe 8: Netzwerkprogrammierung
 **Beschreibung:** Schreibe ein Programm, das eine HTTP-Anfrage an eine API sendet, um Daten zu holen (nutze eine öffentliche API wie https://jsonplaceholder.typicode.com/posts). Verarbeite die Antwort und drucke einige spezifische Details aus den Daten.

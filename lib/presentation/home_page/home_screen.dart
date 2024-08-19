@@ -92,46 +92,49 @@ class _HomeScreenState extends State<HomeScreen> {
                       'Portfolio',
                       style: Theme.of(context).textTheme.headlineMedium,
                     )
-                  : Row(
-                      children: [
-                        TextButton(
-                            onPressed: () {
-                              scrollToContainer(0);
-                              
-                            },
-                            child: Text(
-                              'Home',
-                              style: Theme.of(context).textTheme.headlineMedium,
-                            )),
-                        const VerticalDivider(
-                          color: Colors.white,
-                          thickness: 5,
-                        ),
-                        TextButton(
-                            onPressed: () => scrollToContainer(1),
-                            child: Text(
-                              'Skills',
-                              style: Theme.of(context).textTheme.headlineMedium,
-                            )),
-                        const VerticalDivider(
-                          color: Colors.white,
-                          thickness: 5,
-                        ),
-                        TextButton(
-                            onPressed: () => scrollToContainer(2),
-                            child: Text(
-                              'Projects',
-                              style: Theme.of(context).textTheme.headlineMedium,
-                            )),
-                        TextButton(
-                            onPressed: () => scrollToContainer(3),
-                            child: Text(
-                              'Contact',
-                              style: Theme.of(context).textTheme.headlineMedium,
-                            )),
-                        // TODO - Add tailing button for contact and add login button + page
-                      ],
-                    ),
+                  : SingleChildScrollView(
+                     scrollDirection: Axis.horizontal,
+                    child: Row(
+                        children: [
+                          TextButton(
+                              onPressed: () {
+                                scrollToContainer(0);
+                                
+                              },
+                              child: Text(
+                                'Home',
+                                style: Theme.of(context).textTheme.headlineMedium,
+                              )),
+                          const VerticalDivider(
+                            color: Colors.white,
+                            thickness: 5,
+                          ),
+                          TextButton(
+                              onPressed: () => scrollToContainer(1),
+                              child: Text(
+                                'Skills',
+                                style: Theme.of(context).textTheme.headlineMedium,
+                              )),
+                          const VerticalDivider(
+                            color: Colors.white,
+                            thickness: 5,
+                          ),
+                          TextButton(
+                              onPressed: () => scrollToContainer(2),
+                              child: Text(
+                                'Projects',
+                                style: Theme.of(context).textTheme.headlineMedium,
+                              )),
+                          TextButton(
+                              onPressed: () => scrollToContainer(3),
+                              child: Text(
+                                'Contact',
+                                style: Theme.of(context).textTheme.headlineMedium,
+                              )),
+                          // TODO - Add tailing button for contact and add login button + page
+                        ],
+                      ),
+                  ),
             ),
             actions: [
               IconButton(

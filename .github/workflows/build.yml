@@ -1,6 +1,7 @@
 name: Continuous Integration
 
 on:
+  push:
   workflow_run:
     workflows: ["Test Workflow"]
     types:

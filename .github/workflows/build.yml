@@ -2,9 +2,8 @@ name: Continuous Integration
 
 on:
   workflow_run:
-    workflows: ["Test Workflow"]
-    types:
-      - completed
+    workflows: [Test Workflow]
+    types: [completed]
     branches:
       - main
       - 1-refine-code

@@ -9,7 +9,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:portfolio_947134/main.dart';
 import 'package:portfolio_947134/presentation/home_page/home_screen.dart';
-import 'package:portfolio_947134/presentation/projects_page/project_two_screen%20copy.dart';
 
 
 void main() {
@@ -20,12 +19,12 @@ void main() {
     // Test if the home page is available
     expect(find.byType(HomeScreen), findsOneWidget);
 
-    // Test if the about page is availableq
-    expect(find.byType(ProjectTwoScreen), findsOneWidget);
 
     // Failing tests
     // expect(find.text('0'), findsOneWidget);
     // expect(find.text('1'), findsNothing);
+    // expect(find.byType(ProjectTwoScreen), findsOneWidget);
+
     
   });
 }

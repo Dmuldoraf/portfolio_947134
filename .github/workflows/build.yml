@@ -3,11 +3,10 @@ name: Continuous Integration
 on:
   workflow_run:
     workflows: ["Test Workflow"]
+    types: [completed]
     branches:
       - main
       - 1-refine-code
-    types:
-      - completed
 
 
 jobs:

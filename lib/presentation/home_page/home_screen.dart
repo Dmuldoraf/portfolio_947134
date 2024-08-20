@@ -15,7 +15,10 @@ class _HomeScreenState extends State<HomeScreen> {
   final _scrollController = ScrollController();
 
   void scrollToContainer(int index) {
-    final screenHeight = (MediaQuery.of(context).size.height < 1000 ? 1000 : MediaQuery.of(context).size.height).toDouble();
+    final screenHeight = (MediaQuery.of(context).size.height < 1000
+            ? 1000
+            : MediaQuery.of(context).size.height)
+        .toDouble();
     debugPrint('Screen Height: $screenHeight');
     debugPrint(index.toString());
     // FIXME: Navigation not accurate
@@ -93,17 +96,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       style: Theme.of(context).textTheme.headlineMedium,
                     )
                   : SingleChildScrollView(
-                     scrollDirection: Axis.horizontal,
-                    child: Row(
+                      scrollDirection: Axis.horizontal,
+                      child: Row(
                         children: [
                           TextButton(
                               onPressed: () {
                                 scrollToContainer(0);
-                                
                               },
                               child: Text(
                                 'Home',
-                                style: Theme.of(context).textTheme.headlineMedium,
+                                style:
+                                    Theme.of(context).textTheme.headlineMedium,
                               )),
                           const VerticalDivider(
                             color: Colors.white,
@@ -113,7 +116,8 @@ class _HomeScreenState extends State<HomeScreen> {
                               onPressed: () => scrollToContainer(1),
                               child: Text(
                                 'Skills',
-                                style: Theme.of(context).textTheme.headlineMedium,
+                                style:
+                                    Theme.of(context).textTheme.headlineMedium,
                               )),
                           const VerticalDivider(
                             color: Colors.white,
@@ -123,18 +127,20 @@ class _HomeScreenState extends State<HomeScreen> {
                               onPressed: () => scrollToContainer(2),
                               child: Text(
                                 'Projects',
-                                style: Theme.of(context).textTheme.headlineMedium,
+                                style:
+                                    Theme.of(context).textTheme.headlineMedium,
                               )),
                           TextButton(
                               onPressed: () => scrollToContainer(3),
                               child: Text(
                                 'Contact',
-                                style: Theme.of(context).textTheme.headlineMedium,
+                                style:
+                                    Theme.of(context).textTheme.headlineMedium,
                               )),
                           // TODO - Add tailing button for contact and add login button + page
                         ],
                       ),
-                  ),
+                    ),
             ),
             actions: [
               IconButton(

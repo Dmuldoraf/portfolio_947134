@@ -2,8 +2,9 @@ name: Continuous Integration
 
 on:
   workflow_run:
-    workflows: [Test Workflow]
-    types: [completed]
+    workflows: [Run Test]
+    types: 
+      - completed
     branches:
       - main
       - 1-refine-code
@@ -26,21 +27,3 @@ jobs:
       - run: flutter pub get
       - run: flutter clean
       - run: flutter build web
-
-      
-#  build_android:
-#    name: Build Android
-#    runs-on: ubuntu-latest
-#
-#    steps:
-#      - name: Clone repository
-#        uses: actions/checkout@v4
-#      - name: Set up Flutter
-#        uses: subosito/flutter-action@v2
-#        with:
-#          channel: stable
-#          flutter-version: 3.24.0
-#      - run: flutter --version
-#      - run: flutter pub get
-#      - run: flutter clean
-#      - run: flutter build apk

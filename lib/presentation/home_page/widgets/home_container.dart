@@ -19,7 +19,7 @@ class HomeContainer extends StatelessWidget {
             ),
             // mint_5_noise.png
             // flowers.png
-            child: Image.asset('assets/orange_7_noise.png',
+            child: Image.asset('assets/flowers.png',
                 height: MediaQuery.of(context).size.height,
                 width: MediaQuery.of(context).size.width,
                 fit: BoxFit.cover),

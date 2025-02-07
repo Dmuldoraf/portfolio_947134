@@ -149,7 +149,92 @@ class SWP2TeamContainer extends StatelessWidget {
                             ],
                           ))
                       : Column(
-                          children: [Placeholder()],
+                          children: [
+                            Text('Rollen',
+                                style:
+                                    Theme.of(context).textTheme.headlineLarge),
+                            const SizedBox(height: 20),
+                            Text('Entwicklungsleiter',
+                                style:
+                                    Theme.of(context).textTheme.headlineSmall),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Image.asset(
+                                  'assets/plip_hope1.gif',
+                                  height: 80,
+                                ),
+                                const SizedBox(
+                                  width: 20,
+                                ),
+                                Text(' Philipp Lind',
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headlineMedium),
+                                const SizedBox(
+                                  width: 20,
+                                ),
+                                Image.asset(
+                                  'assets/plip_hope1.gif',
+                                  height: 80,
+                                ),
+                              ],
+                            ),
+                            const SizedBox(
+                              height: 60,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                Column(
+                                  children: [
+                                    Text('Projektleiter',
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .headlineSmall),
+                                    Text('Yuel T.',
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .headlineMedium),
+                                    const SizedBox(
+                                      height: 40,
+                                    ),
+                                    Text('QA Engineer',
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .headlineSmall),
+                                    Text('Kalender D.',
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .headlineMedium),
+                                  ],
+                                ),
+                                Column(
+                                  children: [
+                                    Text('Entwicklerin',
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .headlineSmall),
+                                    Text('Julia K.',
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .headlineMedium),
+                                    const SizedBox(
+                                      height: 40,
+                                    ),
+                                    Text('Entwickler',
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .headlineSmall),
+                                    Text('Abdul C.',
+                                        style: Theme.of(context)
+                                            .textTheme
+                                            .headlineMedium),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ],
                         ),
                 )),
           ),

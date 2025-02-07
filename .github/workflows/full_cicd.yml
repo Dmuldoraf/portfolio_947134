@@ -1,10 +1,9 @@
-name: Run Test
-
+name: Full CI/CD
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches:
       - main
-      - 1-refine-code
 
 jobs:
   flutter_test:

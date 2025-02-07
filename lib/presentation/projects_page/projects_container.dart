@@ -1,9 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio_947134/presentation/projects_page/projects/project_four_container.dart';
-import 'package:portfolio_947134/presentation/projects_page/projects/project_one_container.dart';
+import 'package:portfolio_947134/presentation/projects_page/projects/project_swp1/project_four_container.dart';
+import 'package:portfolio_947134/presentation/projects_page/projects/project_egb/project_one_container.dart';
 import 'package:portfolio_947134/presentation/projects_page/projects/porject_swp2/project_three_container.dart';
-import 'package:portfolio_947134/presentation/projects_page/projects/project_two_container.dart';
+import 'package:portfolio_947134/presentation/projects_page/projects/project_hacken/project_two_container.dart';
 import 'package:portfolio_947134/presentation/projects_page/widgets/single_project_container.dart';
 
 class ProjectsContainer extends StatelessWidget {

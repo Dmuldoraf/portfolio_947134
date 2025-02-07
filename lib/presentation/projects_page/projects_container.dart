@@ -1,9 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:portfolio_947134/presentation/projects_page/widgets/projects/project_four_container.dart';
-import 'package:portfolio_947134/presentation/projects_page/widgets/projects/project_one_container.dart';
-import 'package:portfolio_947134/presentation/projects_page/widgets/projects/project_three_container.dart';
-import 'package:portfolio_947134/presentation/projects_page/widgets/projects/project_two_container.dart';
+import 'package:portfolio_947134/presentation/projects_page/projects/project_four_container.dart';
+import 'package:portfolio_947134/presentation/projects_page/projects/project_one_container.dart';
+import 'package:portfolio_947134/presentation/projects_page/projects/porject_swp2/project_three_container.dart';
+import 'package:portfolio_947134/presentation/projects_page/projects/project_two_container.dart';
 import 'package:portfolio_947134/presentation/projects_page/widgets/single_project_container.dart';
 
 class ProjectsContainer extends StatelessWidget {
@@ -47,17 +47,18 @@ class ProjectsContainer extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Projects',
+                      'Projekte',
                       style: Theme.of(context).textTheme.headlineLarge,
                     ),
                     const SizedBox(
                       width: 10,
                     ),
-                    MediaQuery.of(context).size.width > 600 
-                    ? Text(
-                      '(Hold shift to scroll with mouse wheel)',
-                      style: Theme.of(context).textTheme.bodyMedium,
-                    ): const Text('')
+                    MediaQuery.of(context).size.width > 600
+                        ? Text(
+                            '(Halte shift und scrolle um alle Projekte zu sehen)',
+                            style: Theme.of(context).textTheme.bodyMedium,
+                          )
+                        : const Text('')
                   ],
                 ),
                 const SizedBox(

@@ -24,7 +24,9 @@ class ProjectTwoContainer extends StatelessWidget {
               Text('Hacken', style: Theme.of(context).textTheme.headlineMedium),
               ConstrainedBox(
                   constraints: const BoxConstraints(maxHeight: 300),
-                  child: Image.asset('assets/hacker_hope_front.png')),
+                  child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8.0),
+                      child: Image.asset('assets/hacker_hope_front.png'))),
               ElevatedButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/project_two');

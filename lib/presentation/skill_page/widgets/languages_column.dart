@@ -7,7 +7,7 @@ class LanguagesColumn extends StatelessWidget {
     return Column(
       children: [
         Text(
-          'Languages',
+          'Sprachen',
           style: Theme.of(context).textTheme.headlineMedium,
         ),
         const SizedBox(height: 20),

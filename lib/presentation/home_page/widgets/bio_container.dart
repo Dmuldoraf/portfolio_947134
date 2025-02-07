@@ -10,7 +10,7 @@ class BioContainer extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            "Hi!\nI'm Philipp Lind.",
+            "Hi!\nIch bin Philipp Lind.",
             style: Theme.of(context).textTheme.headlineMedium,
           ),
           const SizedBox(height: 8.0),
@@ -20,13 +20,13 @@ class BioContainer extends StatelessWidget {
               repeatForever: true,
               pause: const Duration(milliseconds: 900),
               animatedTexts: [
-                TypewriterAnimatedText('Developer',
+                TypewriterAnimatedText('Entwickler',
                     textStyle: Theme.of(context).textTheme.headlineMedium,
                     speed: const Duration(milliseconds: 100)),
                 TypewriterAnimatedText('Student',
                     textStyle: Theme.of(context).textTheme.headlineMedium,
                     speed: const Duration(milliseconds: 100)),
-                TypewriterAnimatedText('Professional Driver',
+                TypewriterAnimatedText('Maschinenführer',
                     textStyle: Theme.of(context).textTheme.headlineMedium,
                     speed: const Duration(milliseconds: 100)),
               ],
@@ -58,7 +58,7 @@ class BioContainer extends StatelessWidget {
                         child: Padding(
                           padding: const EdgeInsets.all(16.0),
                           child: Text(
-                            'I am a student at the Technische Hochschule Mittelhessen and work part-time at the Gießen Municipal Utilities as a software developer. My interest lies in new, innovative, and sustainable projects. Before and at the beginning of my studies, I worked as a driver of a Diamant 2000 and a truck driver.',
+                            'Ich bin Student der Wirtschaftsinformatik an der Technischen Hochschule Mittelhessen und arbeite als Werkstudent bei den Stadtwerken Gießen als Softwareentwickler. Mein Interesse gilt neuen, innovativen und nachhaltigen Projekten. Vor meiner Stelle bei den SWG arbeitete ich bei der Conbee GmbH und m2m Germany GmbH als Entwickler im IoT-Bereich. Außerdem arbeitete ich im Lohnunternehmen Lind als Fahrer eines Diamant 2000 und als LKW-Fahrer.',
                             style: Theme.of(context).textTheme.bodyMedium,
                             textAlign: TextAlign.justify,
                           ),
@@ -73,7 +73,7 @@ class BioContainer extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.start,
                           children: [
                             Text(
-                              'Email:',
+                              'E-Mail:',
                               style: Theme.of(context).textTheme.bodyMedium,
                             ),
                             Text(
@@ -82,7 +82,7 @@ class BioContainer extends StatelessWidget {
                             ),
                             const SizedBox(height: 16.0),
                             Text(
-                              'Student Number:',
+                              'Matrikelnummer:',
                               style: Theme.of(context).textTheme.bodyMedium,
                             ),
                             Text(
@@ -91,7 +91,7 @@ class BioContainer extends StatelessWidget {
                             ),
                             const SizedBox(height: 16.0),
                             Text(
-                              'Subject Area:',
+                              'Studiengang',
                               style: Theme.of(context).textTheme.bodyMedium,
                             ),
                             Text(

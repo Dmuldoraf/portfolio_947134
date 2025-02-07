@@ -21,12 +21,14 @@ class ProjectOneContainer extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Center(
-                  child: Text('Website',
+                  child: Text('Webseite',
                       style: Theme.of(context).textTheme.headlineMedium)),
               const SizedBox(height: 20),
               ConstrainedBox(
                   constraints: const BoxConstraints(maxHeight: 200),
-                  child: Image.asset('assets/bio_screen.png')),
+                  child: ClipRRect(
+                      borderRadius: BorderRadius.circular(8.0),
+                      child: Image.asset('assets/bio_screen.png'))),
               const SizedBox(height: 10),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,

@@ -24,7 +24,7 @@ class _ContactFormState extends State<ContactForm> {
   void _submitForm(String name, String email, String subject, String message) {
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
-        content: Text('Sending message...'),
+        content: Text('Sende Nachricht...'),
       ),
     );
   }
@@ -83,31 +83,34 @@ class _ContactFormState extends State<ContactForm> {
                           style: Theme.of(context).textTheme.headlineMedium,
                         ),
                         const SizedBox(width: 8.0),
-                        GestureDetector(
-                          onTap: _handleSubmit,
-                          child: const CircleAvatar(
-                            radius: 12.0,
-                            backgroundColor: Colors.black,
-                            child: Icon(
-                              Icons.arrow_forward,
-                              color: Colors.white,
-                              size: 16.0,
-                            ),
-                          ),
-                        ),
                       ],
                     ),
                     const SizedBox(height: 24.0),
                     ContactTextField(
-                        controller: _nameController, label: 'Your Name'),
+                        controller: _nameController, label: 'Name'),
                     ContactTextField(
-                        controller: _emailController, label: 'Email'),
+                        controller: _emailController, label: 'E-Mail'),
                     ContactTextField(
-                        controller: _subjectController, label: 'Subject'),
+                        controller: _subjectController, label: 'Betreff'),
                     ContactTextField(
                         controller: _messageController,
-                        label: 'Message',
+                        label: 'Nachricht',
                         maxLines: 5),
+                    const SizedBox(height: 24.0),
+                    Center(
+                      child: GestureDetector(
+                        onTap: _handleSubmit,
+                        child: const CircleAvatar(
+                          radius: 20.0,
+                          backgroundColor: Colors.black,
+                          child: Icon(
+                            Icons.arrow_forward,
+                            color: Colors.white,
+                            size: 16.0,
+                          ),
+                        ),
+                      ),
+                    ),
                   ],
                 ),
               ),

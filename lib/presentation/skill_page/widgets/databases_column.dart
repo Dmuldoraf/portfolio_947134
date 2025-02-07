@@ -7,7 +7,7 @@ class DatabaseColumn extends StatelessWidget {
     return Column(
       children: [
         Text(
-          'Databases',
+          'Datenbanken',
           style: Theme.of(context).textTheme.headlineMedium,
         ),
         const SizedBox(height: 20),

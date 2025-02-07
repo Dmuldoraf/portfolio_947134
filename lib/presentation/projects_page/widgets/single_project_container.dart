@@ -9,11 +9,11 @@ class SingleProjectContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height *0.6,
-      constraints:const BoxConstraints(
+      height: MediaQuery.of(context).size.height * 0.6,
+      constraints: const BoxConstraints(
         minHeight: 600,
       ),
-          
+
       width: MediaQuery.of(context).size.width > 800
           ? MediaQuery.of(context).size.width * 0.33
           : 400,

@@ -20,7 +20,6 @@ class OperatingColumn extends StatelessWidget {
             SkillColumn(imgUrl: 'ubuntu', name: 'Ubuntu'),
             VerticalDivider(
                 thickness: 30, color: Color.fromARGB(0, 255, 255, 255)),
-            SkillColumn(imgUrl: 'linux', name: 'Linux'),
           ],
         ),
       ],

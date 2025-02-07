@@ -4,6 +4,7 @@ import 'package:portfolio_947134/presentation/about_page/abaout_screen.dart';
 import 'package:portfolio_947134/presentation/curriculum_page/curriculum_screen.dart';
 import 'package:portfolio_947134/presentation/home_page/home_screen.dart';
 import 'package:portfolio_947134/presentation/projects_page/project_one_screen.dart';
+import 'package:portfolio_947134/presentation/projects_page/projects/porject_swp2/project_three_screen.dart';
 import 'package:portfolio_947134/presentation/projects_page/project_two_screen%20copy.dart';
 import 'package:portfolio_947134/presentation/skill_page/empty_screen.dart';
 import 'package:portfolio_947134/themes.dart';
@@ -42,6 +43,7 @@ class MyApp extends StatelessWidget {
         '/skills': (context) => const SkillScreen(),
         '/project_one': (context) => const ProjectOneScreen(),
         '/project_two': (context) => const ProjectTwoScreen(),
+        '/project_three': (context) => ProjectThreeScreen(),
       },
     );
   }

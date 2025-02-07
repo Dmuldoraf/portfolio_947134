@@ -45,7 +45,7 @@ class SkillsContainer extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
-                      'Skills',
+                      'Software Skills',
                       style: Theme.of(context).textTheme.headlineLarge,
                     ),
                     const SizedBox(
